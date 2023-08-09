@@ -5,15 +5,15 @@ import "./Steps.css";
 const Steps = ({ currentStep }) => {
   return (
     <section className="steps">
-      <section className="step">
+      <section className="step active">
         <AiOutlineUser />
         <p>Identificação</p>
       </section>
-      <section className="step">
+      <section className={`step ${currentStep >= 1 ? "active" : ""}`}>
         <AiOutlineStar />
         <p>Avaliação</p>
       </section>
-      <section className="step">
+      <section className={`step ${currentStep >= 2 ? "active" : ""}`}>
         <FiSend />
         <p>Envio</p>
       </section>
